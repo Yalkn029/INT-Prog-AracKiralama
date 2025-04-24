@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tüm Araçlar  Alkan Araç Kiralama</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Alkan Araç Kiralama</h1>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('login') }}">Ana Sayfa</a></li>
+                <li><a href="{{ url_for('araclar') }}">Araçlar</a></li>
+                <li><a href="{{ url_for('iletisim') }}">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tüm Kiralanabilir Araçlar</h2>
+        <section class="car-list">
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='3-serisi-sedan.png') }}" alt="BMW 3 Serisi">
+                <h3>BMW 3 Serisi</h3>
+                <p>Fiyat: 500 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='mercedes-benz-a-class-w177-696x392-08-2022.avif') }}" alt="Mercedes Benz A-Class">
+                <h3>Mercedes Benz A-Class</h3>
+                <p>Fiyat: 600 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='golf.png') }}" alt="Volkswagen Golf">
+                <h3>Volkswagen Golf</h3>
+                <p>Fiyat: 400 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='araba 1.webp') }}" alt="Citroen Aircross C3">
+                <h3>Citroen Aircross C3</h3>
+                <p>Fiyat: 450 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+               <img src="{{ url_for('static', filename='doblo.png') }}" alt="doblo"> 
+                <h3>Fiat Fiorino</h3>
+                <p>Fiyat: 330 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+            <img src="{{ url_for('static', filename='megane.png') }}" alt="megane">
+            <h3>Renault Megane</h3>
+            <p>Fiyat: 450 TL/gün</p>
+            <button>Kirala</button>
+            </div>
+            <div class="car-item">
+            <img src="{{ url_for('static', filename='kuga.png') }}" alt="kuga">
+             <h3>Ford Kuga </h3>   
+            <p>Fiyat: 450 TL/gün</p>
+            <button>Kirala</button>
+            </div>
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='408.png') }}" alt="408">
+                <h3>Peugeot 408 </h3>
+                <p>Fiyat: 500 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='bmwxienterpriseon_638780813108939501.png') }}" alt="BMW">
+                <h3>BMW X1 Plug-in Hybrid</h3>
+                <p>Fiyat: 700 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='enterprisesol_638694172493579582.png') }}" alt="BMW">
+                <h3>BMW 1.20 M SPORT</h3>
+                <p>Fiyat: 1200 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            <div class="car-item">
+                <img src="{{ url_for('static', filename='mercedesvitosol.png') }}" alt="vito">
+                <h3>Mercedes Vito Dizel</h3>
+                <p>Fiyat: 1000 TL/gün</p>
+                <button>Kirala</button>
+            </div>
+            
+            
+        </section>
+    </main>
+
+    
+</body>
+</html>
