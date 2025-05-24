@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Araç Fiyatları - Alkan Araç Kiralama</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Alkan Araç Kiralama</h1>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Ana Sayfa</a></li>
+                <li><a href="{{ url_for('araclar') }}">Araçlar</a></li>    
+                <li><a href="{{ url_for('iletisim') }}">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Araç Fiyat Listesi</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Marka & Model</th>
+                    <th>Günlük Fiyat</th>
+                    <th>Haftalık Fiyat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BMW 3 Serisi</td>
+                    <td>500 TL</td>
+                    <td>3300 TL</td>
+                </tr>
+                <tr>
+                    <td>Mercedes A-Class</td>
+                    <td>600 TL</td>
+                    <td>3900 TL</td>
+                </tr>
+                <tr>
+                    <td>Volkswagen Golf</td>
+                    <td>400 TL</td>
+                    <td>2600 TL</td>
+                </tr>
+                <tr>
+                    <td>Citroen Aircross C3</td>
+                    <td>450 TL</td>
+                    <td>2500 TL</td>
+                </tr>
+                <tr>
+                    <td>Fiat Fiorino</td>
+                    <td>330 TL</td>
+                    <td>2500 TL</td>
+                </tr>
+                <tr>
+                    <td>Ford Kugo</td>
+                    <td>450 TL  </td>
+                    <td>2800 TL</td>
+                </tr>
+                <tr>
+                    <td>BMW X1 Plug-in Hybrid</td>
+                    <td>700 TL</td>
+                    <td>4500 TL</td>
+                </tr>
+                <tr>
+                    <td>BMW 1.20 M SPORT</td>
+                    <td>1200 TL</td>
+                    <td>6500 TL</td>
+                </tr>
+                <tr>
+                    <td>Mercedes Vito Dizel</td>
+                    <td>1000 TL</td>
+                    <td>6000 TL</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
+
+    
+</body>
+</html>

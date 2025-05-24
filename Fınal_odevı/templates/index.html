@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç Kiralama</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Alkan Araç Kiralama</h1>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Alkan Araç Kiralama Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Ana Sayfa</a></li>
+                <li><a href="{{ url_for('iletisim') }}">İletişim</a></li>
+                <li><a href="{{ url_for('kampanyalar') }}">Kampanyalar</a></li>
+               
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="{{ url_for('login') }}" class="login-button">Giriş Yap</a>
+            <a href="{{ url_for('register') }}" class="register-button">Kayıt Ol</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="car-list">
+            <h2>Mevcut Araçlar</h2>
+            <a href="{{ url_for('login') }}" class="car-item">
+                <img src="{{ url_for('static', filename='3-serisi-sedan.png') }}" alt="BMW 3 Serisi">
+                <h3>BMW 3 Serisi</h3>
+             
+            </a>
+            <a href="{{ url_for('login') }}" class="car-item">
+                <img src="{{ url_for('static', filename='mercedes-benz-a-class-w177-696x392-08-2022.avif') }}" alt="Mercedes Benz A-Class">
+                <h3>Mercedes Benz A-Class</h3>
+               
+            </a>
+            <a href="{{ url_for('login') }}" class="car-item">
+                <img src="{{ url_for('static', filename='golf.png') }}" alt="Volkswagen Golf">
+                <h3>Volkswagen Golf</h3>
+            
+            </a>
+            <a href="{{ url_for('login') }}" class="car-item">
+                <img src="{{ url_for('static', filename='araba 1.webp') }}" alt="Citroen Aircross C3">
+                <h3>Citroen Aircross C3</h3>
+            
+            </a>
+            <a href="{{ url_for('login') }}" class="car-item">
+                <img src="{{ url_for('static', filename='kuga.png') }}" alt="Kuga">
+                <h3>Kuga</h3>
+            
+            </a>
+          <a href="{{ url_for('login') }}" class="car-item">
+             <img src="{{ url_for('static', filename='doblo.png') }}" alt="doblo">
+               <h3>Fiat Fiorino</h3>
+            
+             </a>     
+
+            
+        </section>
+    </main>
+</body>
+</html>
+
+
+        <div>
+            <h1>Araç kiralamanın En Doğru Adresi</h1>
+            <p>Yüzlerce araç kiralama firmasını bünyesinde barındıran Alkan Araç Kiralama, sana Türkiye’nin 81 ilinde kolay ve güvenli kiralama seçenekleri sunuyor...</p>
+        </div>
+
+        
+        <section class="rental-tips">
+            <h2>Araç Kiralarken Dikkat Edilmesi Gerekenler</h2>
+            <ul>
+                <li><strong>Sigorta Seçeneklerini Kontrol Et:</strong> Kiralama sırasında aracın sigorta kapsamını sorgula. İhtiyacın olup olmadığını değerlendirmek için araç sigortası hakkında bilgi al.</li>
+                <li><strong>Yolda Kalan Yardımı:</strong> Yolda kalman durumunda, kiralama şirketinin sunduğu 7/24 yardım hattını öğren. Bu hizmeti kullanabilmek için anlaşmanı kontrol et.</li>
+                <li><strong>Aracın Durumunu Kontrol Et:</strong> Aracı teslim almadan önce aracın dışını ve içini kontrol et. Herhangi bir hasar varsa, kiralama şirketine bildirdiğinden emin ol.</li>
+                <li><strong>Depozito Koşullarını Öğren:</strong> Araç kiralama firmaları genellikle bir depozito talep eder. Depozito miktarını öğren ve iade koşullarını netleştir.</li>
+                <li><strong>Yaş Sınırlamalarına Dikkat Et:</strong> Çoğu araç kiralama firması, belirli bir yaş sınırına sahiptir. Bu yüzden, yaşınızın uygun olup olmadığını kontrol edin.</li>
+                <li><strong>Kilometre Sınırlarını Kontrol Et:</strong> Bazı araç kiralama firmaları, belirli bir kilometre limiti koyar. Bu limiti aşman durumunda ekstra ücretler uygulanabilir.</li>
+                <li><strong>Yakıt Politikası:</strong> Aracın yakıt politikası hakkında bilgi edin. Çoğu firma, aracı full tank teslim almanı ister. Aracı aynı şekilde geri getirmen önemlidir.</li>
+            </ul>
+        </section>
+
+       
+      
+      
+        
+    </main>
+
+   
+</body>
+</html>

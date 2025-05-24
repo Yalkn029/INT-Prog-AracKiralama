@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç Kiralama</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
+
+    <style>
+        .logout-btn { background-color: #f57c00; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; margin: 20px; transition: background-color 0.3s ease; }
+        .logout-btn:hover { background-color: #e57000; }
+        .logout-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center; }
+        .logout-modal { background-color: #ffffff; padding: 30px; border-radius: 15px; text-align: center; width: 90%; max-width: 400px; box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        .logout-modal h2 { margin-bottom: 20px; color: #f57c00; }
+        .logout-modal button { background-color: #f57c00; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; margin: 10px; font-weight: bold; transition: background-color 0.3s ease; }
+        .logout-modal button:hover { background-color: #e57000; }
+        .logout-modal .cancel-btn { background-color: #888; }
+        .logout-modal .cancel-btn:hover { background-color: #555; }
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div class="header-content">
+            <h1>Alkan Araç Kiralama</h1>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Alkan Araç Kiralama Logo" class="logo-img">
+            <button class="logout-btn" onclick="showLogoutModal()">Çıkış Yap</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Ana Sayfa</a></li>
+                <li><a href="{{ url_for('araclar') }}">Araçlar</a></li>
+                <li><a href="{{ url_for('iletisim') }}">İletişim</a></li>
+                <li><a href="{{ url_for('kampanyalar') }}">Kampanyalar</a></li>
+                <li><a href="{{ url_for('arac_kiralama') }}"> Kiralama Formu</a></li>
+                <li><a href="{{ url_for('arac_iade') }}"> İade formu</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <main>
+        <section class="car-list">
+            <h2>Mevcut Araçlar</h2>
+            <a href="{{ url_for('araclar') }}" class="car-item">
+                <img src="{{ url_for('static', filename='3-serisi-sedan.png') }}" alt="BMW 3 Serisi">
+                <h3>BMW 3 Serisi</h3>
+                <p>Fiyat: 500 TL/gün</p>
+                <button>Kirala</button>
+            </a>
+            <a href="{{ url_for('araclar') }}" class="car-item">
+                <img src="{{ url_for('static', filename='mercedes-benz-a-class-w177-696x392-08-2022.avif') }}" alt="Mercedes Benz A-Class">
+                <h3>Mercedes Benz A-Class</h3>
+                <p>Fiyat: 600 TL/gün</p>
+                <button>Kirala</button>
+            </a>
+            <a href="{{ url_for('araclar') }}" class="car-item">
+                <img src="{{ url_for('static', filename='golf.png') }}" alt="Volkswagen Golf">
+                <h3>Volkswagen Golf</h3>
+                <p>Fiyat: 400 TL/gün</p>
+                <button>Kirala</button>
+            </a>
+            <a href="{{ url_for('araclar') }}" class="car-item">
+                <img src="{{ url_for('static', filename='araba 1.webp') }}" alt="Citroen Aircross C3">
+                <h3>Citroen Aircross C3</h3>
+                <p>Fiyat: 450 TL/gün</p>
+                <button>Kirala</button>
+            </a>
+            <a href="{{ url_for('araclar') }}" class="car-item">
+                <img src="{{ url_for('static', filename='kuga.png') }}" alt="Kuga">
+                <h3>Kuga</h3>
+                <p>Fiyat: 400 TL/gün</p>
+                <button>Kirala</button>
+            </a>
+          <a href="{{ url_for('araclar') }}" class="car-item">
+             <img src="{{ url_for('static', filename='doblo.png') }}" alt="doblo">
+               <h3>Fiat Fiorino</h3>
+                <p>Fiyat: 330 TL/gün</p>
+                <button>Kirala</button>
+             </a>     
+
+            
+        </section>
+    </main>
+</body>
+</html>
+
+
+        <div>
+            <h1>Araç kiralamanın En Doğru Adresi</h1>
+            <p>Yüzlerce araç kiralama firmasını bünyesinde barındıran Alkan Araç Kiralama, sana Türkiye’nin 81 ilinde kolay ve güvenli kiralama seçenekleri sunuyor...</p>
+        </div>
+
+        
+        <section class="rental-tips">
+            <h2>Araç Kiralarken Dikkat Edilmesi Gerekenler</h2>
+            <ul>
+                <li><strong>Sigorta Seçeneklerini Kontrol Et:</strong> Kiralama sırasında aracın sigorta kapsamını sorgula. İhtiyacın olup olmadığını değerlendirmek için araç sigortası hakkında bilgi al.</li>
+                <li><strong>Yolda Kalan Yardımı:</strong> Yolda kalman durumunda, kiralama şirketinin sunduğu 7/24 yardım hattını öğren. Bu hizmeti kullanabilmek için anlaşmanı kontrol et.</li>
+                <li><strong>Aracın Durumunu Kontrol Et:</strong> Aracı teslim almadan önce aracın dışını ve içini kontrol et. Herhangi bir hasar varsa, kiralama şirketine bildirdiğinden emin ol.</li>
+                <li><strong>Depozito Koşullarını Öğren:</strong> Araç kiralama firmaları genellikle bir depozito talep eder. Depozito miktarını öğren ve iade koşullarını netleştir.</li>
+                <li><strong>Yaş Sınırlamalarına Dikkat Et:</strong> Çoğu araç kiralama firması, belirli bir yaş sınırına sahiptir. Bu yüzden, yaşınızın uygun olup olmadığını kontrol edin.</li>
+                <li><strong>Kilometre Sınırlarını Kontrol Et:</strong> Bazı araç kiralama firmaları, belirli bir kilometre limiti koyar. Bu limiti aşman durumunda ekstra ücretler uygulanabilir.</li>
+                <li><strong>Yakıt Politikası:</strong> Aracın yakıt politikası hakkında bilgi edin. Çoğu firma, aracı full tank teslim almanı ister. Aracı aynı şekilde geri getirmen önemlidir.</li>
+            </ul>
+        </section>
+
+       
+      
+        
+        
+    </main>
+     <div id="logout-overlay" class="logout-overlay">
+        <div class="logout-modal">
+            <h2>Çıkış Yapmak İstediğinizden Emin misiniz?</h2>
+            <button onclick="logout()">Evet, Çıkış Yap</button>
+            <button class="cancel-btn" onclick="hideLogoutModal()">İptal</button>
+        </div>
+    </div>
+    <script>
+        function showLogoutModal() {
+            document.getElementById('logout-overlay').style.display = 'flex';
+        }
+        function hideLogoutModal() {
+            document.getElementById('logout-overlay').style.display = 'none';
+        }
+        function logout() {
+            window.location.href = "{{ url_for('index') }}";
+        }
+    </script>
+
+   
+</body>
+</html>

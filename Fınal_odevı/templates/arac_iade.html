@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç İade Formu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .confirmation-message {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Alkan Araç Kiralama</h1>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Alkan Araç Kiralama Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Ana Sayfa</a></li>
+                <li><a href="{{ url_for('araclar') }}">Araçlar</a></li>
+                <li><a href="{{ url_for('iletisim') }}">İletişim</a></li>
+                <li><a href="{{ url_for('kampanyalar') }}">Kampanyalar</a></li>
+                <li><a href="{{ url_for('arac_kiralama') }}">Kiralama Formu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h2>Araç İade Formu</h2>
+            <form action="#" method="POST" class="return-form" onsubmit="showConfirmationMessage(event)">
+                <div class="form-group">
+                    <label for="return-date">İade Tarihi:</label>
+                    <input type="date" id="return-date" name="return-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="return-condition">Araç Durumu:</label>
+                    <select id="return-condition" name="return-condition" required>
+                        <option value="iyi">İyi</option>
+                        <option value="hasarli">Hasarlı</option>
+                        <option value="kirilmis">Kırılmış</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="return-comments">Ekstra Yorumlar:</label>
+                    <textarea id="return-comments" name="return-comments" rows="4" placeholder="Araçla ilgili herhangi bir ekstra yorum ekleyebilirsiniz."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">İade Et</button>
+                </div>
+            </form>
+            <div id="confirmation-message" class="confirmation-message">
+                ✅ İade talebiniz alınmıştır. Teşekkür ederiz!
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showConfirmationMessage(event) {
+            event.preventDefault();
+            document.getElementById('confirmation-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
